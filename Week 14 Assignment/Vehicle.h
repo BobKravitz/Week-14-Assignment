@@ -17,6 +17,8 @@ class Vehicle
 private:
 	string manufacturer;
 	int year;
+	
+public:
 
 	Vehicle();
 	
@@ -35,12 +37,9 @@ private:
 	int getYear()const;
 	
 
-	void displayInfo()const;
+	virtual void displayInfo()const;
 	
 
-
 };
-
-
 
 #endif
