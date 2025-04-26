@@ -1,22 +1,23 @@
 #include "Vehicle.h"
-#pragma once
+
+#ifndef CAR_H//Include guard.
+#define CAR_H
 
 
-class Car : public Vehicle
+class Car : public Vehicle//This class inherits from the vehicle class
 {
 private:
-	int doors;
+	int doors;//The member variable unique to the car class.
 
 public:
 
-	Car();
+	Car();//Default constructor.
 
-	Car(int x, string m, int y);
+	Car(int x, string m, int y);//Constructor.
 
-	void setDoors(int);
-
+	void setDoors(int);//All function prototypes.
 	int getDoors() const;
-
-	virtual void displayInfo() const;
+	void displayInfo() const;
 
 };
+#endif

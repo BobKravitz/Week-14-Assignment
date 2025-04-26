@@ -1,45 +1,32 @@
 
 #include <string>
-#include <cmath>
 #include <iomanip>
-#include <vector>
-#include <random>
 #include <iostream> 
-#include <fstream> 
 #include <cstdlib>
 using namespace std;
 
-#ifndef VEHICLE_H
+#ifndef VEHICLE_H//Include guard.
 #define VEHICLE_H
 
 class Vehicle
 {
 private:
-	string manufacturer;
+	string manufacturer;//All private members.
 	int year;
 	
 public:
 
-	Vehicle();
+	Vehicle();//Default constructor.
 	
-	Vehicle(string m, int y);
+	Vehicle(string m, int y);//Constructor.
 	
 
-	void setManufacturer(string m);
-	
-	
+	void setManufacturer(string m);//All function prototypes
 	void setYear(int y);
-	
-
 	string getManufacture()const;
-	
-
 	int getYear()const;
+	void displayInfo()const;
 	
-
-	virtual void displayInfo()const;
-	
-
 };
 
 #endif
